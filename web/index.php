@@ -21,7 +21,8 @@ $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
 
   // return
-  return $app['twig']->render('index.twig');
+  array('names' => $names)
+  return $app['twig']->render('index.twig', array('id' => getenv("FOURSQUARE_CLIENT_ID"), 'secret' => getenv("FOURSQUARE_SECRET")));
 });
 
 $app->run();
