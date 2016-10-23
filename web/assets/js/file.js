@@ -10,7 +10,9 @@ function apicall(){
       {client_id: "MUUGJ2ZLK23TYMNXL1LAYRKP0LC4AX2JG0ZWCQTDJVLFS1VK", 
       client_secret: "EMKL5KL2TIQJLK1GTSZFYXOXPD0CVZSSK4CILB3WZ1QYCPZO",
       v: '20161016'},
-      function(data){$(".result").html(data);});
+      function(data){
+        debugger;
+        $(".result").html(data);});
   });
 }
   
