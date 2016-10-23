@@ -23,7 +23,7 @@ $app->get('/', function() use($app) {
   $secret = getenv("FOURSQUARE_SECRET");
   // return
   // array('id' => $id, 'secret' => $secret)
-  return $app['twig']->render('index.twig');
+  return $app['twig']->render('index.twig', array("id" => $id));
 });
 
 $app->run();
