@@ -19,10 +19,11 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  getenv('FOURSQUARE_CLIENT_ID')
-  getenv('FOURSQUARE_SECRET')
+  $don = getenv("FOURSQUARE_CLIENT_ID");
+  $secret = getenv("FOURSQUARE_SECRET");
   // return
-  return $app['twig']->render('index.twig');
+  // array('id' => $id, 'secret' => $secret)
+  return $app['twig']->render('index.twig', array("don" => $don));
 });
 
 $app->run();
