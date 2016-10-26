@@ -1,7 +1,25 @@
 body {
-  /*background: #fff url(https://s17.postimg.org/8kd73xzvz/ubm_like_bg.jpg) no-repeat;*/
-  background: #fff url(https://s9.postimg.org/ifye21p7j/ubm_like_bg1.jpg) center 15px no-repeat;
+  background: #fff url(https://s13.postimg.org/qoez0pp8n/ubm_like_bg1.jpg) center 15px no-repeat;
+  background-size:cover
   font: 0.75em Arial,Helvetica,Verdana;
   color: #58585a;
   line-height: 1.3;
+}
+
+#menu_bar {
+  width: 100%; margin: 0px auto; color: white; font-size: .75em;
+}
+
+#thumbs_container {
+  width:970px; 
+  margin-top: 20px;
+}
+
+.thumbs_column {
+  padding: 0px;
+}
+
+.thumb_container {
+  width: 150px; 
+  margin: 0 auto;
 }
