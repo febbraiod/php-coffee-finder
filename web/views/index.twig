@@ -65,11 +65,12 @@
       </div>
 
       <div id='thumbs_container'>
+        
 
         <div class='col-sm-2 thumb_column'>
           <!-- each thumb container needs a 'data-pic' attr that holds the url for the viewport active pic -->
           <div class='thumb_container' id='thumb_1'>
-            <img src='http://s13.postimg.org/cnc9hwzs7/pro_pic_thumb.jpg'>
+            <img src=<%{{images[0].thumb_url}}%>>
             <div style='background-color: blue;'><h3>Professional</h3></div> <!-- these keywords should be stored in the db with the picture urls. maybe the background color too?-->
           </div>
         </div>
