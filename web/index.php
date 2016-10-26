@@ -33,7 +33,17 @@ $app->get('/', function() use($app) {
   $secret = getenv("FOURSQUARE_SECRET");
   // return
   // array('id' => $id, 'secret' => $secret)
-  return $app['twig']->render('index.twig', array("don" => $don));
+
+  $it = $app['pdo']->prepare('SELECT * FROM image_table');
+  $it->execute();
+
+  $images = array();
+  while ($row = $it->fetch(PDO::FETCH_ASSOC)) {
+    $app['monolog']->addDebug('Row ' . $row);
+    $images[] = $row;
+  }
+
+  return $app['twig']->render('index.twig', array("don" => $don, 'images' => $images));
 });
 
 // renders all rows in specified table
