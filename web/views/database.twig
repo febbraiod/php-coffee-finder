@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<p>Got these rows from the image database:</p>
+
+<ul>
+{% for i in imageTableRows %}
+  <li> {{ i }} </li>
+{% else %}
+  <li>No rows!</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
