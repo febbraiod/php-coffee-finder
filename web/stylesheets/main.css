@@ -6,8 +6,16 @@ body {
   line-height: 1.3;
 }
 
+h3 {
+  color: white;
+  margin-top: 0px;
+}
+
 #menu_bar {
-  width: 100%; margin: 0px auto; color: white; font-size: .75em;
+  width: 100%; 
+  margin: 0px auto; 
+  color: white; 
+  font-size: .75em;
 }
 
 #thumbs_container {
@@ -16,7 +24,8 @@ body {
 }
 
 .thumbs_column {
-  padding: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .thumb_container {
