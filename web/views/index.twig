@@ -65,13 +65,22 @@
       </div>
 
       <div id='thumbs_container'>
-        
 
+      {% for i in images %}
         <div class='col-sm-2 thumb_column'>
-          <!-- each thumb container needs a 'data-pic' attr that holds the url for the viewport active pic -->
+          <div class='thumb_container' id='thumb_2'>
+            <img src=<%{{i.thumb_url}}%>>
+            <div style='background-color: red;'><h3>Reliable</h3></div>
+          </div>
+        </div>
+      {% endfor %}
+
+
+     <!--    <div class='col-sm-2 thumb_column'>
+          each thumb container needs a 'data-pic' attr that holds the url for the viewport active pic
           <div class='thumb_container' id='thumb_1'>
-            <img src=<%{{images[0].thumb_url}}%>>
-            <div style='background-color: blue;'><h3>Professional</h3></div> <!-- these keywords should be stored in the db with the picture urls. maybe the background color too?-->
+            <img src='http://s13.postimg.org/cnc9hwzs7/pro_pic_thumb.jpg'>
+            <div style='background-color: blue;'><h3>Professional</h3></div>  these keywords should be stored in the db with the picture urls. maybe the background color too?
           </div>
         </div>
 
@@ -104,7 +113,7 @@
             <img src='http://s21.postimg.org/tfewij9rr/local_pic_thumb.jpg'>
             <div style='background-color: green;'><h3>Local</h3></div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
