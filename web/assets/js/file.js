@@ -11,8 +11,7 @@ function apicall(){
       client_secret: "EMKL5KL2TIQJLK1GTSZFYXOXPD0CVZSSK4CILB3WZ1QYCPZO",
       v: '20161016',
       near: 'Astoria, NY',
-      query: 'coffee',
-      intent: 'browse'},
+      query: 'coffee'},
       function(data){
         debugger;
         $(".result").html(data);});
