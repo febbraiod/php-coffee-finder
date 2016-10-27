@@ -43,7 +43,16 @@ $app->get('/', function() use($app) {
     $images[] = $row;
   }
 
-  return $app['twig']->render('index.twig', array("don" => $don, 'images' => $images));
+  $ct = $app['pdo']->prepare('SELECT * FROM coffee_table');
+  $ct->execute();
+
+  $venues = array();
+  while ($row = $ct->fetch(PDO::FETCH_ASSOC)) {
+    $app['monolog']->addDebug('Row ' . $row);
+    $venues[] = $row;
+  }
+
+  return $app['twig']->render('index.twig', array("don" => $don, 'images' => $images, 'venues' => $venues));
 });
 
 // renders all rows in specified table
