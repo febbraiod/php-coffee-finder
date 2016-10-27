@@ -12,7 +12,6 @@ function apicall(){
       v: '20161016',
       near: 'Astoria, NY',
       query: 'coffee',
-      limit: 5,
       intent: 'browse'},
       function(data){
         debugger;
