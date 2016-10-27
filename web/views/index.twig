@@ -68,7 +68,7 @@
 
       {% for i in images %}
         <div class='col-sm-2 thumb_column'>
-          <div class='thumb_container' id='thumb_2'>
+          <div class='thumb_container' id={{ 'thumb'~i.id }}>
             <img src={{i.thumb_url}}>
             <div style='background-color: red;'><h3>Reliable</h3></div>
           </div>
