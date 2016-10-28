@@ -43,3 +43,7 @@ function pictureChanger(){
 }
 
 var changePic = pictureChanger();
+
+function hoverPic(){
+  $('.thumb_container').hover(function(){$('#viewport img').attr('src', $(this).data('full'));});
+}
