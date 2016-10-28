@@ -27,7 +27,7 @@ function image_carosel(){
 }
 
 function pictureChanger(){
-  var i = 0;
+  var i = 1;
   return function(){
     if(i < 6){
       i++;
