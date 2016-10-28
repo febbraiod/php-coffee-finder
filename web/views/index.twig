@@ -89,13 +89,9 @@
       <h6>{{v.name}}</h6>
       <p><a href='#'>{{v.address}}<br>{{v.cityandstate}}</a></p><br>
     {% endfor %}
-    <h4>Norwalk no good?</h4>
-      <input id="get_city" type="text" placeholder="City, ST" role="textbox">
-      <button id='button'>Let's go!</button>
     </div>
 
     <div class="col-sm-9 main_section" style='width: 970px; min-width: 970px;'>
-      
       <div id='viewport'>
         <img src='http://s12.postimg.org/4h21ri80d/pro_pic.jpg'>
       </div>
@@ -112,9 +108,15 @@
       {% endfor %}
 
       </div>
+      <div id='city_search'>
+        <h4>Norwalk no good?</h4>
+        <input id="get_city" type="text" placeholder="City, ST" role="textbox">
+        <button id='button'>Let's go somewhere else!</button>
+      </div>
     </div>
 
   </div> <!-- row -->
+
 
 </div>
 
