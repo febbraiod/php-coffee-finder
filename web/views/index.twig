@@ -2,8 +2,6 @@
 
 {% block content %}
 <div class="container">
-  <button id='button'>callapi</button>
-  <div class='.results'></div>
   <div class='row'>
 
     <div class='col-sm-offset-1 col-sm-1'>
@@ -58,7 +56,16 @@
   <hr>
 
   <div class="row">
-    <div class="col-sm-1"><h4>Let's Get Coffee!</h4>><h5>In Norwalk:</h5>{{venues}}</div>
+    <div class="col-sm-1" style='background-color: white;'>
+      <h4>Let's Get Coffee!</h4>
+      <h5>In <span id='coffee_city'>Norwalk, CT</span>:</h5>
+    <% for v in venues %>
+      <h6>{{v.name}}</h6>
+      <p><a href='#'>{{v.address}}<br>{{v.cityandstate}}</a></p><br>
+    <%endfor%>
+    </div>
+    <button id='button'>callapi</button>
+    <div class='.results'></div>
     <div class="col-sm-9 main_section" style='width: 970px; min-width: 970px;'>
       
       <div id='viewport'>

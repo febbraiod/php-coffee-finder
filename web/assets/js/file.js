@@ -23,7 +23,7 @@ function apicall(){
 }
   
 function image_carosel(){
-  setInterval(changePic, 2000);
+  setInterval(changePic, 2700);
 }
 
 function pictureChanger(){
