@@ -39,13 +39,14 @@ function pictureChanger(){
       i = 1;
     }
     $('#viewport img').attr('src', $('#thumb' + i).data('full'));
-    $('#thumb' + i).addClass('active');
-    $('#thumb' + (i-1)).removeClass('active');
   };
 }
 
 var changePic = pictureChanger();
 
 function hoverPic(){
-  $('.thumb_container').hover(function(){$('#viewport img').attr('src', $(this).data('full'));});
+  $('.thumb_container').hover(function(){
+    $('#viewport img').attr('src', $(this).data('full'));
+    clearInterval(changePic);
+  }, function(){});
 }
