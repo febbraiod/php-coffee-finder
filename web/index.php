@@ -29,10 +29,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
-  $don = getenv("FOURSQUARE_CLIENT_ID");
-  $secret = getenv("FOURSQUARE_SECRET");
-  // return
-  // array('id' => $id, 'secret' => $secret)
 
   $it = $app['pdo']->prepare('SELECT * FROM image_table');
   $it->execute();
@@ -52,7 +48,7 @@ $app->get('/', function() use($app) {
     $venues[] = $row;
   }
 
-  return $app['twig']->render('index.twig', array("don" => $don, 'images' => $images, 'venues' => $venues));
+  return $app['twig']->render('index.twig', array('images' => $images, 'venues' => $venues));
 });
 
 // renders all rows in specified table
