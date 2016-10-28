@@ -17,8 +17,8 @@ h3 {
   color: white; 
 }
 
-nav li{
-  font-size: .75em;
+nav li a{
+  font-size: 1em;
 }
 
 #thumbs_container {
