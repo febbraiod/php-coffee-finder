@@ -84,7 +84,7 @@
   <div class="row">
     <div class="col-sm-1" style='background-color: white;'>
       <h4>Let's Get Coffee!</h4>
-      <h6>In <span id='coffee_city'>Norwalk, CT</span>:</h6>
+      <h6>In <span class='coffee_city'>Norwalk, CT</span>:</h6>
     {% for v in venues %}
       <h6 id={{'venuename'~v.id}}>{{v.name}}</h6>
       <p><a id={{'venue'~v.id}} href='#'>{{v.address}}<br>{{v.cityandstate}}</a></p><br>
@@ -109,7 +109,7 @@
 
       </div>
       <div id='city_search'>
-        <h4>Norwalk no good?</h4>
+        <h4><span class='coffee_city'>Norwalk</span> no good?</h4>
         <input id="get_city" type="text" placeholder="City, ST" role="textbox">
         <button id='button'>Let's go somewhere else!</button>
       </div>

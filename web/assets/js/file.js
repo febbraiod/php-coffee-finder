@@ -23,6 +23,7 @@ function apicall(){
           $('#venuename' + i).text(venue.name);
           $('#venue' + i).html(venue.location.formattedAddress[0] + '<br>' + venue.location.formattedAddress[1]);
         }
+        $('.coffee_city').text(city);
       }).fail(function() {
                 alert("Error: Did you enter a valid City, ST?");
               });
