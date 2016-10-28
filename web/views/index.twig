@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="container">
+  <div class='spacer' style='min-height: 25px;'></div>
   <div class='row'>
-
     <div class='col-sm-offset-1 col-sm-1'>
     
       <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.69 119.02">
@@ -47,7 +47,41 @@
 
     <div class='col-sm-9' style='background-color: blue; text-align: center;'>
       <div id='menu_bar'>
-        I will eventually be the 'nav'
+        <nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">DON</a>
+        </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav>
       </div>
     </div>
 
@@ -58,14 +92,14 @@
   <div class="row">
     <div class="col-sm-1" style='background-color: white;'>
       <h4>Let's Get Coffee!</h4>
-      <h5>In <span id='coffee_city'>Norwalk, CT</span>:</h5>
+      <h6>In <span id='coffee_city'>Norwalk, CT</span>:</h6>
     {% for v in venues %}
       <h6>{{v.name}}</h6>
       <p><a href='#'>{{v.address}}<br>{{v.cityandstate}}</a></p><br>
     {% endfor %}
-    </div>
     <button id='button'>callapi</button>
     <div class='.results'></div>
+    </div>
     <div class="col-sm-9 main_section" style='width: 970px; min-width: 970px;'>
       
       <div id='viewport'>
