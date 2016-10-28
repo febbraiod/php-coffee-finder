@@ -1,7 +1,6 @@
 $(function() {
     apicall();
     image_carousel();
-    hoverPic();
 });
 
 function apicall(){
@@ -27,7 +26,14 @@ function apicall(){
 }
   
 function image_carousel(){
-  setInterval(changePic, 2700);
+  var c = setInterval(changePic, 2700);
+
+  $('.thumb_container').hover(function(){
+    clearInterval(c);
+    $('#viewport img').attr('src', $(this).data('full'));
+  }, function(){
+    c = setInterval(changePic, 2700);
+  });
 }
 
 function pictureChanger(){
@@ -43,12 +49,3 @@ function pictureChanger(){
 }
 
 var changePic = pictureChanger();
-
-function hoverPic(){
-  $('.thumb_container').hover(function(){
-    clearInterval(changePic);
-    $('#viewport img').attr('src', $(this).data('full'));
-  }, function(){
-    setInterval(changePic, 2700);
-  });
-}
