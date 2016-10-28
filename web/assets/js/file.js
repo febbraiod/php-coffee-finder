@@ -1,5 +1,6 @@
 $(function() {
     apicall();
+    image_carosel();
 });
 
 function apicall(){
@@ -21,3 +22,16 @@ function apicall(){
   });
 }
   
+function image_carosel(){
+  setInterval(changePic, 500);
+}
+
+function pictureChanger(){
+  var i = 0;
+  return function(){
+    i < 6 ? i++ : i = 1;
+    $('#viewport:first-child').attr('src', $('#thumb' + i).data('full'));
+  };
+}
+
+var changePic = pictureChanger();

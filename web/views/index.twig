@@ -69,7 +69,7 @@
 
       {% for i in images %}
         <div class='col-sm-2 thumb_column'>
-          <div class='thumb_container' id={{ 'thumb'~i.id }}>
+          <div class='thumb_container' id={{ 'thumb'~i.id }} data-full={{i.fullsize_url}}>
             <img src={{i.thumb_url}}>
             <div style="{{'background-color: '~i.banner_color~';'}}"><h3>{{i.title}}</h3></div>
           </div>
