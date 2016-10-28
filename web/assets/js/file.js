@@ -35,7 +35,7 @@ function pictureChanger(){
     }else{
       i = 1;
     }
-    $('#viewport:first-child').attr('src', $('#thumb' + i).data('full'));
+    $('#viewport img').attr('src', $('#thumb' + i).data('full'));
     debugger
   };
 }
