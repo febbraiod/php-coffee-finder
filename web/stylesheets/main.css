@@ -13,8 +13,11 @@ h3 {
 
 #menu_bar {
   width: 100%; 
-  margin: 15px auto; 
+  margin: 20px auto; 
   color: white; 
+}
+
+nav li{
   font-size: .75em;
 }
 
