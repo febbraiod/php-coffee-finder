@@ -43,6 +43,10 @@ $app->get('/', function() use($app) {
     $images[] = $row;
   }
 
+  usort($images, function ($a, $b) {
+    return $a.id <=> $b.id;
+  });
+
   $ct = $app['pdo']->prepare('SELECT * FROM coffee_table');
   $ct->execute();
 
