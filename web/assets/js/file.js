@@ -18,7 +18,10 @@ function apicall(){
       intent: 'browse'},
       function(data){
         debugger;
-        $(".result").html(data);});
+      $(".result").html(data);})
+      .fail(function() {
+          alert("Error: Did you enter a valid City, ST?");
+      });
   });
 }
   
