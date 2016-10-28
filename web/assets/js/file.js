@@ -24,13 +24,19 @@ function apicall(){
   
 function image_carosel(){
   setInterval(changePic, 500);
+  debugger
 }
 
 function pictureChanger(){
   var i = 0;
   return function(){
-    i < 6 ? i++ : i = 1;
+    if(i < 6){
+      i++;
+    }else{
+      i = 1;
+    }
     $('#viewport:first-child').attr('src', $('#thumb' + i).data('full'));
+    debugger
   };
 }
 
