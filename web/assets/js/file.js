@@ -46,7 +46,9 @@ var changePic = pictureChanger();
 
 function hoverPic(){
   $('.thumb_container').hover(function(){
-    $('#viewport img').attr('src', $(this).data('full'));
     clearInterval(changePic);
-  }, function(){});
+    $('#viewport img').attr('src', $(this).data('full'));
+  }, function(){
+    setInterval(changePic, 2700);
+  });
 }
