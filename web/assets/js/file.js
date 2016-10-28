@@ -23,8 +23,7 @@ function apicall(){
 }
   
 function image_carosel(){
-  setInterval(changePic, 500);
-  debugger
+  setInterval(changePic, 1000);
 }
 
 function pictureChanger(){
@@ -36,7 +35,7 @@ function pictureChanger(){
       i = 1;
     }
     $('#viewport img').attr('src', $('#thumb' + i).data('full'));
-    debugger
+
   };
 }
 
