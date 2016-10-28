@@ -17,11 +17,15 @@ function apicall(){
       limit: 5,
       intent: 'browse'},
       function(data){
-        debugger;
-      $(".result").html(data);})
-      .fail(function() {
-          alert("Error: Did you enter a valid City, ST?");
-      });
+        var venues = data.response.venues;
+        for(var i = 1; i<= 5 ; i++){
+          var venue = venues[i-1];
+          $('#venuename' + i).text(venue.name);
+          $('#venue' + i).html(venue.location.formattedAddress[0] + '<br>' + venue.location.formattedAddress[1]);
+        }
+      }).fail(function() {
+                alert("Error: Did you enter a valid City, ST?");
+              });
   });
 }
   

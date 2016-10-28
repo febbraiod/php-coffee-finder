@@ -35,8 +35,3 @@ nav li a{
   width: 150px; 
   margin: 0 auto;
 }
-
-.active {
-  border: solid 1px;
-  border-color: yellow;
-}

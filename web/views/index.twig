@@ -86,8 +86,8 @@
       <h4>Let's Get Coffee!</h4>
       <h6>In <span id='coffee_city'>Norwalk, CT</span>:</h6>
     {% for v in venues %}
-      <h6>{{v.name}}</h6>
-      <p><a href='#'>{{v.address}}<br>{{v.cityandstate}}</a></p><br>
+      <h6 id={{'venuename'~v.id}}>{{v.name}}</h6>
+      <p><a id={{'venue'~v.id}} href='#'>{{v.address}}<br>{{v.cityandstate}}</a></p><br>
     {% endfor %}
     </div>
 
