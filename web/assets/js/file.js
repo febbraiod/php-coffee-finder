@@ -1,6 +1,7 @@
 $(function() {
     apicall();
-    image_carosel();
+    image_carousel();
+    hoverPic();
 });
 
 function apicall(){
@@ -25,7 +26,7 @@ function apicall(){
   });
 }
   
-function image_carosel(){
+function image_carousel(){
   setInterval(changePic, 2700);
 }
 
@@ -38,7 +39,8 @@ function pictureChanger(){
       i = 1;
     }
     $('#viewport img').attr('src', $('#thumb' + i).data('full'));
-
+    $('#thumb' + i).addClass('active');
+    $('#thumb' + (i-1)).removeClass('active');
   };
 }
 
