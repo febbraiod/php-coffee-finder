@@ -24,8 +24,9 @@ function apicall(){
         for(var i = 1; i<= 5 ; i++){
           var venue = venues[i-1];
           $('#venuename' + i).text(venue.name);
+          var addyForGoogle = venue.location.formattedAddress[0].replace(/ *\([^)]*\) */g, "").trim();
           $('#venue' + i).html(venue.location.formattedAddress[0] + '<br>' + venue.location.formattedAddress[1]);
-          $('#venue' + i).attr('href', "https://www.google.com/maps/place/" + venue.location.formattedAddress[0] + ' ' + venue.location.formattedAddress[1]);
+          $('#venue' + i).attr('href', "https://www.google.com/maps/place/" + addyForGoogle + ' ' + venue.location.formattedAddress[1]);
         }
       }).fail(function() {alert("Error: Did you enter a valid City, ST?");});
   });
