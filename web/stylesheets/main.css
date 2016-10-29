@@ -53,8 +53,16 @@ nav li a{
 }
 
 .d, .o, .n {
-  fill: #004c94;
+  fill: white;
   stroke: #004c94;
+  stroke-width: 0px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.letter_fill {
+  fill: #004c94;
+  stroke-width: 1px;
 }
 
 .filled_circle {
