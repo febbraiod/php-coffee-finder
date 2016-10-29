@@ -62,6 +62,7 @@ var changePic = pictureChanger();
 // logo animation
 
 function goLogo(){
+  debugger;
   $('.logo_circle').addClass('filled_circle');
   $('.d, .o, .n').addClass('letter_fill');
 }
