@@ -6,14 +6,16 @@ $(function() {
 function apicall(){
   $('#button').click(function(){
     var city = $('#get_city').val();
-    var params = {client_id: "MUUGJ2ZLK23TYMNXL1LAYRKP0LC4AX2JG0ZWCQTDJVLFS1VK", 
+    var params = {
+      client_id: "MUUGJ2ZLK23TYMNXL1LAYRKP0LC4AX2JG0ZWCQTDJVLFS1VK", 
       client_secret: "EMKL5KL2TIQJLK1GTSZFYXOXPD0CVZSSK4CILB3WZ1QYCPZO",
       v: '20161016',
       near: city,
       radius: 5000,
       query: 'coffee',
       limit: 5,
-      intent: 'browse'};
+      intent: 'browse'
+    };
 
     $.get("https://api.foursquare.com/v2/venues/search", params,
       function(data){
@@ -23,6 +25,7 @@ function apicall(){
           var venue = venues[i-1];
           $('#venuename' + i).text(venue.name);
           $('#venue' + i).html(venue.location.formattedAddress[0] + '<br>' + venue.location.formattedAddress[1]);
+          $('#venue' + i).attr('href', "https://www.google.com/maps/place/" + venue.location.formattedAddress[0] + ' ' + venue.location.formattedAddress[1]);
         }
       }).fail(function() {alert("Error: Did you enter a valid City, ST?");});
   });
