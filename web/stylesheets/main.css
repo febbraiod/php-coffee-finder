@@ -44,8 +44,8 @@ nav li a{
   stroke-width: 1px;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all 4s;
+  transition: all 4s;
 }
 
 .logo_circle, .d, .o, .n {
@@ -56,8 +56,8 @@ nav li a{
   fill: white;
   stroke: #004c94;
   stroke-width: 0px;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all 4s;
+  transition: all 4s;
 }
 
 .letter_fill {

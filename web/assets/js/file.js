@@ -64,4 +64,6 @@ var changePic = pictureChanger();
 function goLogo(){
   $('circle').attr("class", "logo_circle filled_circle");
   $('.d').attr("class", "d letter_fill");
+  $('.o').attr("class", "o letter_fill");
+  $('.n').attr("class", "n letter_fill");
 }
