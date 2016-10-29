@@ -11,7 +11,7 @@ function apicall(){
       client_secret: "EMKL5KL2TIQJLK1GTSZFYXOXPD0CVZSSK4CILB3WZ1QYCPZO",
       v: '20161016',
       near: city,
-      radius: 5000,
+      radius: 4000,
       query: 'coffee',
       limit: 5,
       intent: 'browse'
@@ -25,8 +25,9 @@ function apicall(){
           var venue = venues[i-1];
           $('#venuename' + i).text(venue.name);
           var addyForGoogle = venue.location.formattedAddress[0].replace(/ *\([^)]*\) */g, "").trim();
-          $('#venue' + i).html(venue.location.formattedAddress[0] + '<br>' + venue.location.formattedAddress[1]);
-          $('#venue' + i).attr('href', "https://www.google.com/maps/place/" + addyForGoogle + ' ' + venue.location.formattedAddress[1]);
+          var citystate = venue.location.formattedAddress[1];
+          $('#venue' + i).html(venue.location.formattedAddress[0] + '<br>' + citystate);
+          $('#venue' + i).attr('href', "https://www.google.com/maps/place/" + addyForGoogle + ' ' + citystate);
         }
       }).fail(function() {alert("Error: Did you enter a valid City, ST?");});
   });
