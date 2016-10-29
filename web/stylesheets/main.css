@@ -42,8 +42,8 @@ nav li a{
   fill: white;
   stroke: #00475b;
   stroke-width: 1px;
-  stroke-dasharray: 20;
-  stroke-dashoffset: 20;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
   -webkit-transition: all 2s;
   transition: all 2s;
 }
