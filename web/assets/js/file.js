@@ -1,8 +1,10 @@
 $(function() {
     apicall();
     image_carousel();
+    goLogo();
 });
 
+// get coffee api call and dom rewrite
 function apicall(){
   $('#button').click(function(){
     var city = $('#get_city').val();
@@ -32,7 +34,8 @@ function apicall(){
       }).fail(function() {alert("Error: Did you enter a valid City, ST?");});
   });
 }
-  
+ 
+// image carousel 
 function image_carousel(){
   var c = setInterval(changePic, 2700);
 
@@ -55,3 +58,9 @@ function pictureChanger(){
 }
 
 var changePic = pictureChanger();
+
+// logo animation
+
+function goLogo(){
+  $('.circle').addClass('filled_circle');
+}

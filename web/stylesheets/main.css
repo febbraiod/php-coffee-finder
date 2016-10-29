@@ -11,14 +11,14 @@ h3 {
   margin-top: 0px;
 }
 
+nav li a{
+  font-size: 1.5em;
+}
+
 #menu_bar {
   width: 100%; 
   margin: 20px auto; 
   color: white; 
-}
-
-nav li a{
-  font-size: 1.5em;
 }
 
 #thumbs_container {
@@ -34,4 +34,31 @@ nav li a{
 .thumb_container {
   width: 150px; 
   margin: 0 auto;
+}
+
+/*for logo*/
+
+.circle {
+  fill: white;
+  stroke: #00475b;
+  stroke-width: 1px;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.circle, .d, .o, .n {
+  stroke-miterlimit: 10;
+}
+
+.d, .o, .n {
+  fill: #004c94;
+  stroke: #004c94;
+}
+
+.filled_circle {
+  fill: #00475b;
+  stroke-width: 0px;
+  stroke-dashoffset: 0;
 }
