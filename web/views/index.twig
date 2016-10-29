@@ -80,7 +80,9 @@
       <h6>In:<br> <span class='coffee_city'>Norwalk, CT</span></h6>
     {% for v in venues %}
       <h6 id={{'venuename'~v.id}}>{{v.name}}</h6>
-      <p><a id={{'venue'~v.id}} href={{ "https://www.google.com/maps/place/#{v.address|replace({ (" "): '+' })}+#{v.cityandstate|replace({ (" "): '+' })}" }}>{{v.address}}<br>{{v.cityandstate}}</a></p>
+      <p>
+        <a id={{'venue'~v.id}} href={{ "https://www.google.com/maps/place/#{v.address|replace({ (" "): '+' })}+#{v.cityandstate|replace({ (" "): '+' })}" }}>{{v.address}}<br>{{v.cityandstate}}</a>
+      </p>
     {% endfor %}
     </div>
 
