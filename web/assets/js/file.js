@@ -63,7 +63,7 @@ var changePic = pictureChanger();
 
 function goLogo(){
   $('circle').attr("class", "logo_circle filled_circle");
-  setTimeout($('.d').attr("class", "d letter_fill"), 500);
-  setTimeout($('.o').attr("class", "o letter_fill"), 1000);
-  setTimeout($('.n').attr("class", "n letter_fill"), 1500);
+  setTimeout(function(){$('.d').attr("class", "d letter_fill");}, 500);
+  setTimeout(function(){$('.o').attr("class", "o letter_fill");}, 1000);
+  setTimeout(function(){$('.n').attr("class", "n letter_fill");}, 1500);
 }
