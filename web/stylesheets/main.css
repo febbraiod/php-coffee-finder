@@ -38,7 +38,7 @@ nav li a{
 
 /*for logo*/
 
-.circle {
+.logo_circle {
   fill: white;
   stroke: #00475b;
   stroke-width: 1px;
@@ -48,7 +48,7 @@ nav li a{
   transition: all 2s;
 }
 
-.circle, .d, .o, .n {
+.logo_circle, .d, .o, .n {
   stroke-miterlimit: 10;
 }
 

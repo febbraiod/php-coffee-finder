@@ -62,5 +62,5 @@ var changePic = pictureChanger();
 // logo animation
 
 function goLogo(){
-  $('.circle').addClass('filled_circle');
+  setTimeout($('.logo_circle').addClass('filled_circle'), 500);
 }
