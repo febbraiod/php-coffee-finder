@@ -25,7 +25,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
-// Our web handlers
+// web handlers
 
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
@@ -62,8 +62,18 @@ $app->get('/db/', function() use($app) {
     $imageTableRows[] = $row;
   }
 
+  $ct = $app['pdo']->prepare('SELECT * FROM coffee_table');
+  $ct->execute();
+
+  $venues = array();
+  while ($row = $ct->fetch(PDO::FETCH_ASSOC)) {
+    $app['monolog']->addDebug('Row ' . $row);
+    $venues[] = $row;
+  }
+
   return $app['twig']->render('database.twig', array(
-    'imageTableRows' => $imageTableRows
+    'imageTableRows' => $imageTableRows,
+    'venues' => $venues
   ));
 });
 

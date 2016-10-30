@@ -21,6 +21,11 @@ nav li a{
   color: white; 
 }
 
+.main_section {
+  width: 970px; 
+  min-width: 970px;
+}
+
 #thumbs_container {
   width:970px; 
   margin-top: 20px;
@@ -69,4 +74,11 @@ nav li a{
   fill: #00475b;
   stroke-width: 0px;
   stroke-dashoffset: 0;
+}
+
+@media (max-width: 1200px) {
+  .main_section {
+    width: 890px; 
+    min-width: 890px;
+  }
 }

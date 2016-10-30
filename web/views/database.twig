@@ -11,4 +11,14 @@
 {% endfor %}
 </ul>
 
+<hr>
+
+<ul>
+{% for v in venues %}
+  <li> {{ dump(v)}} </li>
+{% else %}
+  <li>No rows!</li>
+{% endfor %}
+</ul>
+
 {% endblock %}
