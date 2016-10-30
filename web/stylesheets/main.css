@@ -101,7 +101,7 @@ nav li a{
 
 @media (max-width: 1000px) {
   .main_section {
-    width: 750px; 
-    min-width: 750px;
+    width: 690px; 
+    min-width: 690px;
   }
 }
