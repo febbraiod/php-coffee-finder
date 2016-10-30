@@ -34,6 +34,7 @@ nav li a{
   width: 100%;
   max-width: 100%;
   height: auto;
+  margin: 20px auto;
 }
 
 #thumbs_container {
@@ -101,7 +102,7 @@ nav li a{
 
 @media (max-width: 1000px) {
   .main_section {
-    width: 690px; 
-    min-width: 690px;
+    width: 680px; 
+    min-width: 680px;
   }
 }
