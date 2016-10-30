@@ -30,6 +30,12 @@ nav li a{
   min-width: 970px;
 }
 
+#fullsize_image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 #thumbs_container {
   width:970px; 
   margin-top: 20px;
@@ -86,7 +92,7 @@ nav li a{
 
 @media (max-width: 1200px) {
   .main_section {
-    width: 890px; 
-    min-width: 890px;
+    width: 850px; 
+    min-width: 850px;
   }
 }

@@ -73,14 +73,14 @@
 
     <div class="col-sm-9 main_section">
       <div id='viewport'>
-        <img src='http://s12.postimg.org/4h21ri80d/pro_pic.jpg'>
+        <img id='fullsize_image' src='http://s12.postimg.org/4h21ri80d/pro_pic.jpg'>
       </div>
 
       <div id='thumbs_container'>
 
       {% for i in images %}
         <div class='col-sm-2 thumb_column'>
-          <div class='thumb_container' id={{ 'thumb'~i.id }} data-full={{i.fullsize_url}}>
+          <div class='thumb_container' id={{ 'thumb'~i.id }} data-full={{ i.fullsize_url }}>
             <img src={{i.thumb_url}}>
             <div style="{{'background-color: '~i.banner_color~';'}}"><h3>{{i.title}}</h3></div>
           </div>
