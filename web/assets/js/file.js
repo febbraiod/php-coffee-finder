@@ -62,8 +62,8 @@ var changePic = pictureChanger();
 // logo animation
 
 function goLogo(){
-  $('circle').attr("class", "logo_circle filled_circle");
-  setTimeout(function(){$('.d').attr("class", "d letter_fill");}, 500);
-  setTimeout(function(){$('.o').attr("class", "o letter_fill");}, 1000);
-  setTimeout(function(){$('.n').attr("class", "n letter_fill");}, 1500);
+  setTimeout(function(){$('circle').attr("class", "logo_circle filled_circle");}, 500);
+  setTimeout(function(){$('.d').attr("class", "d letter_fill");}, 1000);
+  setTimeout(function(){$('.o').attr("class", "o letter_fill");}, 1500);
+  setTimeout(function(){$('.n').attr("class", "n letter_fill");}, 2000);
 }
