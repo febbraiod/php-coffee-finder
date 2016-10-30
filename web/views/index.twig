@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-  <div class='spacer' style='min-height: 25px;'></div>
+  <div id='spacer'></div>
   <div class='row'>
     <div class='col-sm-offset-1 col-sm-1'>
     
@@ -58,7 +58,7 @@
   <hr>
 
   <div class="row">
-    <div class="col-sm-1" style='background-color: white;'>
+    <div class="col-sm-1 coffee_column">
       <h4>Let's Get Coffee!</h4>
       <h6>In:<br> <span class='coffee_city'>Norwalk, CT</span></h6>
     {% for v in venues %}
@@ -71,7 +71,7 @@
     {% endfor %}
     </div>
 
-    <div class="col-sm-9 main_section" style='width: 970px; min-width: 970px;'>
+    <div class="col-sm-9 main_section">
       <div id='viewport'>
         <img src='http://s12.postimg.org/4h21ri80d/pro_pic.jpg'>
       </div>
